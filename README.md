@@ -28,7 +28,7 @@
       <a href="https://github.com/RonaldBarberi/kreton-learning-es/blob/main/01_ambiente_virtual/ambientes_virtuales.md" target="_blank">Ambientes Virtuales</a>
     </li>
     <li>
-      <a href="" target="_blank">(Python)-Pandas</a>
+      <a href="https://github.com/RonaldBarberi/kreton-learning-es/blob/main/02_py_pandas/pandas.md" target="_blank">(Python)-Pandas</a>
     </li>
     <li>
       <a href="" target="_blank">(Python)-Numpy</a>
