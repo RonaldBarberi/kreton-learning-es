@@ -4,7 +4,7 @@
 Si gustas tener está información no solo en manera de lectura si no, un video practico extenso, corto, o simplemente un post más resumido, puedes encontrarlo en las siguientes fuentes.
 
 - TikTok: 
-- YouTobe:
+- YouTube:
 - Instragram: 
 
 Eso sería todo, agradezco le pudieses brindar una estrellita a este repositorio, ¡Gracias! 
