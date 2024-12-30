@@ -3,8 +3,8 @@
 ## Lista funciones de Pandas
 |Función|Uso|
 |-------|---|
-| [DataFrame](#DataFrame) |  |
-| [Series](#Series) |  |
+| [DataFrame](#DataFrame) | Generar un DataFrame. |
+| [Series](#Series) | Se utiliza para crear una Serie en Pandas, que es una estructura de datos unidimensional similar a una columna de una tabla o un arreglo unidimensional con etiquetas (índices) |
 | [read_csv](#read_csv) | Leer archivos CSV y generar un DataFrame en base a ellos. |
 | [to_csv](#to_csv) | Exportar un DataFrame en un archivo CSV. |
 | [read_excel](#read_excel)  | Leer archivos XLSX y generar un DataFrame en base a ellos. |
@@ -99,6 +99,33 @@
 | [resample](#resample) |  |
 | [interpolate](#interpolate) |  |
 | [](#) |  |
+
+## DataFrame
+```python
+df = pd.DataFrame(data=None, index=None, columns=None, dtype=None, copy=False)
+```
+
+| Clave | Default | Función | Ejemplo Uso |
+| ----- | ------- | ------- | ----------- |
+| data | None | Este parametro es fundamental, en el se asigna la variable que contiene la información para generar el DataFrame. | pd.DataFrame(data=None) |
+| index | None | Se puede asignar las columna(s) que se utilizarán como índice. | pd.DataFrame(data=None, index=None) |
+| columns | None | Parametro para indicar las columnas específicas para cargar. | pd.DataFrame(data=None, index=None, columns=None) |
+| dtype | None | Se brinda un diccionario, para indicar desde la lectura el tipo de datos de las columnas (ejemplo: {'col1': str, 'col2': int}). | pd.DataFrame(data=None, index=None, columns=None, dtype=None) |
+| copy | False | Si es True, fuerza una copia de los datos, incluso si data es un DataFrame. Por defecto es False. | pd.DataFrame(data=None, index=None, columns=None, dtype=None, copy=False) |
+
+## Series
+```python
+pandas.Series(data=None, index=None, dtype=None, name=None, copy=False, fastpath=False)
+```
+
+| Clave | Default | Función | Ejemplo Uso |
+| ----- | ------- | ------- | ----------- |
+| data | None | Este parametro es fundamental, en el se asigna la variable que contiene la información para generar el DataFrame. | pd.DataFrame(data=None) |
+| index | None | Se puede asignar las columna(s) que se utilizarán como índice. | pd.DataFrame(data=None, index=None) |
+| dtype | None | Se brinda un diccionario, para indicar desde la lectura el tipo de datos de las columnas (ejemplo: {'col1': str, 'col2': int}). | pd.DataFrame(data=None, index=None, dtype=None) |
+| name | None | Nombre de la Serie. Este valor no afecta los datos. | pandas.Series(data=None, index=None, dtype=None, name=None) |
+| copy | False | Si es True, fuerza una copia de los datos, incluso si data es un DataFrame. Por defecto es False. | pd.DataFrame(data=None, index=None, columns=None, dtype=None, copy=False) |
+| fastpath | False | Usado internamente para optimización. No se utiliza en la mayoría de los casos de uso habituales. | pandas.Series(data=None, index=None, dtype=None, name=None, copy=False, fastpath=False) |
 
 ## read_csv
 
@@ -203,18 +230,39 @@ df.to_csv(path_or_buffer, sep=',', na_rep='', float_format=None, columns=None,
 ## read_excel
 
 ```python
-df.read_excel(path_or_buffer, sep=',', na_rep='', float_format=None, columns=None, 
-                        header=True, index=True, index_label=None, mode='w', encoding=None, 
-                        compression='infer', quoting=None, quotechar='"', line_terminator=None, 
-                        chunksize=None, date_format=None, doublequote=True, escapechar=None, 
-                        decimal='.', errors='strict', storage_options=None)
+pd.read_excel(io, sheet_name=0, header=0, names=None, index_col=None, usecols=None, 
+                  squeeze=None, dtype=None, engine=None, converters=None, 
+                  true_values=None, false_values=None, skiprows=None, nrows=None, 
+                  na_values=None, keep_default_na=True, na_filter=True, verbose=False, 
+                  parse_dates=False, date_parser=None, thousands=None, decimal='.', 
+                  comment=None, skipfooter=0, storage_options=None)
 ```
 
 | Clave | Default | Función | Ejemplo Uso |
 | ----- | ------- | ------- | ----------- |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
+| io |  Obligatorio / 'archivo.csv' | Este parametro es fundamental, en el se asigna la ruta del archivo CSV que se leerá. | pd.read_excel(io) |
+| sheet_name | 0 |  | pd.read_excel(io, sheet_name=0) |
+| header | 0 |  | pd.read_excel(io, header=0) |
+| names | None |  | pd.read_excel(io, names=None) |
+| index_col | None |  | pd.read_excel(io, index_col=None) |
+| usecols | None |  | pd.read_excel(io, usecols=None) |
+| squeeze | None |  | pd.read_excel(io, squeeze=None) |
+| dtype | None |  | pd.read_excel(io, dtype=None) |
+| engine | None |  | pd.read_excel(io, engine=None) |
+| converters | None |  | pd.read_excel(io, converters=None) |
+| true_values | None |  | pd.read_excel(io, true_values=None) |
+| false_values | None |  | pd.read_excel(io, false_values=None) |
+| skiprows | None |  | pd.read_excel(io, skiprows=None) |
+| nrows | None |  | pd.read_excel(io, nrows=None) |
+| na_values | None |  | pd.read_excel(io, na_values=None) |
+| keep_default_na | True |  | pd.read_excel(io, keep_default_na=True) |
+| na_filter | True |  | pd.read_excel(io, na_filter=True) |
+| verbose | False |  | pd.read_excel(io, verbose=False) |
+| parse_dates | False |  | pd.read_excel(io, parse_dates=False) |
+| date_parser | None |  | pd.read_excel(io, date_parser=None) |
+| thousands | None |  | pd.read_excel(io, thousand=None) |
+| decimal | '.' |  | pd.read_excel(io, decimal='.') |
+| comment | None |  | pd.read_excel(io, comment=None) |
+| skipfooter | 0 |  | pd.read_excel(io, skipfooter=None) |
+| storage_options | None |  | pd.read_excel(io, storage_options=None) |
 |  |  |  |  |
