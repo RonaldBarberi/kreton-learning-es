@@ -1,23 +1,27 @@
-<!DOCTYPE html>
+<!DOCTYPE>
 <head>
   
 </head>
-<body align="center"> 
-  <h1 align="center">Bienvenido a kreton-learning-es</h1>
-  <h3 align="center">
-    En este repositorio encontrarás documentación especifica sobre uso de herramientas, librerías y sobre todo, buenas practicas.
-    Creado por su servidor: <b>Ronald Barberi.</b>
-  </h3>
-  <h4 align="center">
-    Recuerda que puedes leer toda la documentación, pero si gustas en tener contenido audiovisual con las explicaciones de todo lo que aquí encontrarás, puedes dirigirte a los siguientes canales.
-  </h4>
-  <a href="https://www.linkedin.com/in/ronald-eduardo-barberi-ria%C3%B1o-366a9b22b/" target="blank">
-    <img align="center"
-         src="https://img.shields.io/badge/linkedin-%231DA1F2.svg?style=for-the-badge&logo=linkedin&logoColor=white"
-         alt="linkedin" height="30"/>
-  </a>
-  <a href="https://link.my.youtube.com" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/YouTube_icon_%282013-2017%29.png/576px-YouTube_icon_%282013-2017%29.png" alt="YouTube" height="30"/>
-  </a>
-
+<body align="center">
+  <h1 align="center">Bienvenido a kreton-learning-es</h1>  
+  <h3>En este repositorio encontrarás documentación especifica sobre uso de herramientas, librerías y sobre todo, buenas practicas.</h3>
+  <h4>Creado por: Ronald Barberi.</h4>
+  <p>
+  Recuerda que puedes leer toda la documentación, pero si gustas en tener contenido audiovisual con las explicaciones de todo lo que aquí encontrarás, puedes dirigirte a los siguientes canales.    
+  </p>
+  <p>(Haz clic derecho y selecciona "Abrir en nueva pestaña")</p>
+  <ul>
+    <li>
+      <a href="https://www.linkedin.com/in/ronald-eduardo-barberi-ria%C3%B1o-366a9b22b/", target="_blank">LinkedIn</a> Post Informativo.
+    </li>
+    <li>
+      <a href="", target="_blank">Instagram</a> Post Informativo.
+    </li>
+    <li>
+      <a href="", target="_blank">TikTok</a> Canal con explicación sencilla de la documentación del repositorio.
+    </li>
+    <li>
+      <a href="", target="_blank">YouTube</a> Canal con explicación detallada de la documentación del repositorio.
+    </li>
+  </ul>
 </body>
