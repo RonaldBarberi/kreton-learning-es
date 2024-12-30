@@ -10,10 +10,10 @@
   </p>
   <ul> (Haz clic derecho y selecciona "Abrir en nueva pestaña")
     <li>
-      <a href="https://www.linkedin.com/in/ronald-eduardo-barberi-ria%C3%B1o-366a9b22b/", target="_blank">LinkedIn</a> Post Informativo. 
+      <a href="https://www.linkedin.com/in/ronald-eduardo-barberi-ria%C3%B1o-366a9b22b/", target="_blank">LinkedIn</a> Posts Informativos.
     </li>
     <li>
-      <a href="", target="_blank">Instagram</a> Post Informativo.
+      <a href="", target="_blank">Instagram</a> Posts Informativos.
     </li>
     <li>
       <a href="", target="_blank">TikTok</a> Canal con explicación sencilla de la documentación del repositorio.
