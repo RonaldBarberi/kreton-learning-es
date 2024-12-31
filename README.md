@@ -13,13 +13,13 @@
       <a href="https://www.linkedin.com/in/ronald-eduardo-barberi-ria%C3%B1o-366a9b22b/", target="_blank">LinkedIn</a> Posts Informativos.
     </li>
     <li>
-      <a href="", target="_blank">Instagram</a> Posts Informativos.
+      <a href="https://www.instagram.com/kretonsky/", target="_blank">Instagram</a> Posts Informativos.
     </li>
     <li>
-      <a href="", target="_blank">TikTok</a> Canal con explicación sencilla de la documentación del repositorio.
+      <a href="https://www.tiktok.com/@kretonsky?is_from_webapp=1&sender_device=pc", target="_blank">TikTok</a> Canal con explicación sencilla de la documentación del repositorio.
     </li>
     <li>
-      <a href="", target="_blank">YouTube</a> Canal con explicación detallada de la documentación del repositorio.
+      <a href="", target="_blank">YouTube</a> Canal con explicación detallada de la documentación del repositorio. (Pendiente)
     </li>
   </ul>
   <h2>Contendido generado</h2>
