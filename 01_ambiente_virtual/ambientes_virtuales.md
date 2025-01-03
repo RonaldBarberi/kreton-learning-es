@@ -4,7 +4,7 @@
 Si gustas tener está información no solo en manera de lectura si no, un video practico extenso, corto, o simplemente un post más resumido, puedes encontrarlo en las siguientes fuentes.
 
 - TikTok: https://www.tiktok.com/@kretonsky?is_from_webapp=1&sender_device=pc
-- YouTube: https://www.youtube.com/@ronabarr
+- YouTube: https://www.youtube.com/channel/UCdfWkqINHdzIdkgiuE9eLnQ
 - Instragram: https://www.instagram.com/kretonsky/
 - LinkedIn: https://www.linkedin.com/in/ronald-eduardo-barberi-ria%C3%B1o-rebr/
 
