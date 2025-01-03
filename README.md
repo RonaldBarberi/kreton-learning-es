@@ -19,7 +19,7 @@
       <a href="https://www.tiktok.com/@kretonsky?is_from_webapp=1&sender_device=pc", target="_blank">TikTok</a> Canal con explicación sencilla de la documentación del repositorio.
     </li>
     <li>
-      <a href="", target="_blank">YouTube</a> Canal con explicación detallada de la documentación del repositorio. (Pendiente)
+      <a href="https://www.youtube.com/channel/UCdfWkqINHdzIdkgiuE9eLnQ", target="_blank">YouTube</a> Canal con explicación detallada de la documentación del repositorio. (Pendiente)
     </li>
   </ul>
   <h2>Contendido generado</h2>
