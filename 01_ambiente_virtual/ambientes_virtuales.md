@@ -61,7 +61,7 @@ Pasos especificos dependiendo el sistema operativo a usar:
 - Windows
     ```bash
     # Crear el entorno virtual. (Con la versión especifica, ejem: 3.10.10).
-    python3.10 -m venv nombreEntorno
+    py -3.10 -m venv nombreEntorno
 
     # Iniciar el entorno virtual.
     nombreEntorno/Scripts/activate
