@@ -7,9 +7,9 @@
 | [Read HIVE](#crear-dataframe-en-base-a-hive) | Crear un DataFrame en base a una tabla HIVE. |
 | [To HIVE](#guardar-el-dataframe-como-tabla-hive) | Exportar un DataFrame en HIVE. |
 | [Read CSV](#crear-el-dataframe-a-partir-de-un-archivo-csv) | Crear un DataFrame en base a un archivo CSV. |
-| [To CSV](#) |  |
+| [To CSV](#crear-el-DataFrame-a-partir-de-un-archivo-csv) | Exportan un DataFrame en un archivo CSV. |
 | [Read Excel](#crear-el-dataframe-a-partir-de-un-archivo-excel) | Crear un DataFrame en base a un archivo Excel. |
-| [To Excel](#) |  |
+| [To Excel](#exportar-un-dataframe-a-un-archivo-excel) | Exportan un DataFrame en un archivo Excel. |
 
 ---
 
@@ -212,7 +212,7 @@ df = spark.read
 
 ---
 
-### Exportar un DataFrame a unarchivo Excel.
+### Exportar un DataFrame a un archivo Excel.
 
 ```python
 df.write \
