@@ -105,6 +105,8 @@
 1. Para generar la instalación de la libreria de Pandas se debe ejecutar el siguiente comando:
     ```bash
     pip install pandas
+
+    pip install openpyxl
     ```
 2. Para importar la librería en el script con el fin de utilizarla.
     ```python
