@@ -50,9 +50,9 @@ Se recomienda generar en tu proyecto la carpeta Tools, y allí generar cada carp
 ```
 mi_proyect
  - tools
-   - jdk
-   - hadoop
-   - jar
+   - jdk  --> versión de Java con Oracle.
+   - hadoop  --> los archivos binarios.
+   - jdbc  --> los .jar correspondientes a tú proyecto.
     - excel (Driver del excel en caso de ser descargado manualmente).
 ```
 
