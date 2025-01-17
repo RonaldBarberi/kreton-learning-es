@@ -37,7 +37,7 @@
       <a href="" target="_blank">(Python)-Polars</a>
     </li>
     <li>
-      <a href="" target="_blank">(Python)-PySpark</a>
+      <a href="https://github.com/RonaldBarberi/kreton-learning-es/blob/main/05_py_pyspark/pyspark.md" target="_blank">(Python)-PySpark</a>
     </li>
   </ul>
   <div align="center">
