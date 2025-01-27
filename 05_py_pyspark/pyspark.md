@@ -11,6 +11,7 @@
 | [To CSV](#crear-el-DataFrame-a-partir-de-un-archivo-csv) | Exportan un DataFrame en un archivo CSV. |
 | [Read Excel](#crear-el-dataframe-a-partir-de-un-archivo-excel) | Crear un DataFrame en base a un archivo Excel. |
 | [To Excel](#exportar-un-dataframe-a-un-archivo-excel) | Exportan un DataFrame en un archivo Excel. |
+| [Read JDBC](#crear-el-dataframe-a-partir-de-un-motor-de-base-de-datos) | Crear un DataFrame en base a una Base de Datos. |
 
 ---
 
@@ -290,5 +291,31 @@ df.write \
 | .option('compression', 'NONE') | 'NONE' | Indica si dejeamos exportar el archivo comprimido en gzip. | .option('compression', 'GZIP') |
 | .mode('overwrite') | 'error' | Indica el moto en que pyspark hará la escritura y exporte del archivo (overwrite/append/ignore/error) | .mode('overwrite') |
 | .save('ruta/archivo.xlsx') | Obligatorio | Recibe la ruta ne donde alojara el archivo Excel. | .save('ruta/archivo.xlsx') |
+
+---
+
+### Crear el DataFrame a partir de un motor de Base de Datos.
+
+```python
+df = spark.read \
+    .format('jdbc') \
+    .option('url', 'jdbc:mysql://host:port/database')  # URL de conexión JDBC, cambia el tipo de base de datos y datos según sea necesario \
+    .option('dbtable', 'nombre_de_la_tabla')  # Especifica la tabla o consulta (puede ser una subquery entre paréntesis) \
+    .option('user', 'usuario')  # Usuario de la base de datos \
+    .option('password', 'contraseña')  # Contraseña del usuario \
+    .option('driver', 'com.mysql.cj.jdbc.Driver')  # Controlador JDBC, cambia según el motor de base de datos \
+    .option('fetchsize', '1000')  # Tamaño de lote al recuperar filas \
+    .option('partitionColumn', 'columna_particion')  # Columna utilizada para particionar los datos \
+    .option('lowerBound', 'valor_inferior')  # Límite inferior para la partición \
+    .option('upperBound', 'valor_superior')  # Límite superior para la partición \
+    .option('numPartitions', '10')  # Número de particiones (hilos para paralelismo) \
+    .option('customSchema', 'columna1 INT, columna2 STRING')  # Esquema personalizado (opcional) \
+    .option('queryTimeout', '30')  # Tiempo de espera para consultas (segundos) \
+    .option('batchsize', '5000')  # Tamaño del lote para operaciones de escritura \
+    .option('isolationLevel', 'NONE')  # Nivel de aislamiento de la transacción \
+    .option('pushDownPredicate', 'true')  # Permite empujar filtros a la base de datos \
+    .option('sessionInitStatement', 'SET search_path TO schema')  # Comando de inicialización de sesión SQL \
+    .load()
+```
 
 ---
