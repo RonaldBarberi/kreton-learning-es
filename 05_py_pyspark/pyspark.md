@@ -84,6 +84,31 @@ df.write.saveASTable('bbdd_name.tb_name', path=<ruta/de/tabla/externa>)
 
 ---
 
+### Crear el DataFrame a partir de un archivo TXT.
+```python
+df = spark.read \
+    .format('text') \
+    .option('wholetext', 'false')  # Si true, lee todo el archivo como un solo registro
+    .option('lineSep', '\n')  # Separador de líneas
+    .option('encoding', 'UTF-8')  # Codificación del archivo
+    .option('compression', 'none')  # Tipo de compresión (none, bzip2, gzip, lz4, snappy y deflate)
+    .option('pathGlobFilter', '*.txt')  # Filtro de nombres de archivo
+    .option('recursiveFileLookup', 'false')  # Buscar archivos en subdirectorios
+    .option('modifiedBefore', None)  # Filtrar archivos modificados antes de timestamp
+    .option('modifiedAfter', None)  # Filtrar archivos modificados después de timestamp
+    .option('locale', 'en-US')  # Configuración regional
+    .option('mode', 'PERMISSIVE')  # Modo de lectura (PERMISSIVE, DROPMALFORMED, FAILFAST)
+    .option('multiLine', 'false')  # Soporte para registros multilínea
+    .option('charToEscapeQuoteEscaping', '\\')  # Carácter para escapar citaciones
+    .option('enforceSchema', 'true')  # Aplicar esquema estrictamente
+    .option('samplingRatio', '1.0')  # Proporción de muestreo
+    .option('ignoreMissingFiles', 'false')  # Ignorar archivos faltantes
+    .option('maxColumns', '20480')  # Número máximo de columnas
+    .option('maxCharsPerColumn', '-1')  # Caracteres máximos por columna
+    .option('columnNameOfCorruptRecord', '_corrupt_record')  # Columna para registros corruptos
+    .load('ruta/archivo.txt')
+```
+
 ### Crear el DataFrame a partir de un archivo CSV.
 ```python
 df = spark.read \
