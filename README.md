@@ -49,7 +49,7 @@
   <div align="center">
     <h4>Control</h4>
     <p>
-      create_at: 2024-12-30 10:22:15 || edit_at: 2024-12-30 11:22:15
+      create_at: 2024-12-30 10:22:15 || edit_at: 2025-01-28 20:10:15
     </p>
   </div>
   <footer>
