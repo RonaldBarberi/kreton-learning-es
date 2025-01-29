@@ -144,6 +144,17 @@ public class test {
         }
 
 
+        // ARRAY
+        int vector[] = new int [4];
+
+        vector[1] = 2;
+        vector[2] = 6;
+        vector[3] = 13;
+
+        for (int i = 0; i < vector.length; i++) {
+            System.out.println(vector[i]);
+        }
+
     }
     
 }

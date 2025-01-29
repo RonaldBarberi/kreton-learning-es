@@ -172,3 +172,26 @@ for (int i = 0; i < nombreAlumnos.length; i++) {
     System.out.println(nombreAlumnos[i]);
 }
 ```
+
+---
+
+## ARRAYS (VECTORES Y MATRICES)
+
+Los arrays son un conjunto de de datos que se almacenan en memoria de manera continua con el mismo nombre pero con diferentes indices para interactuar entre ellos.
+
+```java
+// ARRAY
+int vector[] = new int [4];
+
+vector[1] = 2;
+vector[2] = 6;
+vector[3] = 13;
+
+for (int i = 0; i < vector.length; i++) {
+    System.out.println(vector[i]);
+}
+```
+
+---
+
+## 
