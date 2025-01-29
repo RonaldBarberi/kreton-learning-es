@@ -53,6 +53,6 @@
     </p>
   </div>
   <footer>
-    Developer By: Ronald Barberi.
+    Developer By: Ronald Barberi (KretoN).
   </footer>
 </body>
