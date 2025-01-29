@@ -25,19 +25,25 @@
   <h2>Contendido generado</h2>
   <ul>
     <li>
-      <a href="https://github.com/RonaldBarberi/kreton-learning-es/blob/main/01_ambiente_virtual/ambientes_virtuales.md" target="_blank">Ambientes Virtuales</a>
+      <a href="https://github.com/RonaldBarberi/kreton-learning-es/blob/main/ambiente_virtual/ambientes_virtuales.md" target="_blank">Ambientes Virtuales</a>
     </li>
     <li>
-      <a href="https://github.com/RonaldBarberi/kreton-learning-es/blob/main/02_py_pandas/pandas.md" target="_blank">(Python)-Pandas</a>
+      <a href="https://github.com/RonaldBarberi/kreton-learning-es/blob/main/py_pandas/pandas.md" target="_blank">(Python)-Pandas</a>
     </li>
     <li>
-      <a href="" target="_blank">(Python)-Numpy</a>
+      <a href="https://github.com/RonaldBarberi/kreton-learning-es/blob/main/py_numpy/numpy.md" target="_blank">(Python)-Numpy</a>
     </li>
     <li>
-      <a href="" target="_blank">(Python)-Polars</a>
+      <a href="https://github.com/RonaldBarberi/kreton-learning-es/blob/main/py_polars/polars.md" target="_blank">(Python)-Polars</a>
     </li>
     <li>
-      <a href="https://github.com/RonaldBarberi/kreton-learning-es/blob/main/05_py_pyspark/pyspark.md" target="_blank">(Python)-PySpark</a>
+      <a href="https://github.com/RonaldBarberi/kreton-learning-es/blob/main/py_pyspark/pyspark.md" target="_blank">(Python)-PySpark</a>
+    </li>
+    <li>
+      <a href="" target="_blank">Java</a>
+    </li>
+    <li>
+      <a href="" target="_blank">Apache NiFi</a>
     </li>
   </ul>
   <div align="center">
