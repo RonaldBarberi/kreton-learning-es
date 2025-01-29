@@ -40,10 +40,10 @@
       <a href="https://github.com/RonaldBarberi/kreton-learning-es/blob/main/py_pyspark/pyspark.md" target="_blank">(Python)-PySpark</a>
     </li>
     <li>
-      <a href="" target="_blank">Java</a>
+      <a href="https://github.com/RonaldBarberi/kreton-learning-es/blob/main/java/java.md" target="_blank">Java</a>
     </li>
     <li>
-      <a href="" target="_blank">Apache NiFi</a>
+      <a href="https://github.com/RonaldBarberi/kreton-learning-es/blob/main/apache_nifi/apache_nifi.md" target="_blank">Apache NiFi</a>
     </li>
   </ul>
   <div align="center">
