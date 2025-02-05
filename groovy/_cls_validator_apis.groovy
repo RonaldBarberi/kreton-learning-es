@@ -110,7 +110,7 @@ class ValidatorAllParameters {
 
 
     def funObtenerErrores() {
-        return errors.isEmpty() ? "No errors" : errors.join("; ")
+        return errors.isEmpty() ? null : errors.join("; ")
     }
 
 }
