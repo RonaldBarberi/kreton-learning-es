@@ -71,7 +71,7 @@ class ValidatorAllParameters {
     def funValidatorDates(String date_start_in, String date_end_in, boolean isDatetime = false) {
 
         def format_date = DateTimeFormatter.ofPattern("yyyy-MM-dd")
-        def format_datetime = DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss")
+        def format_datetime = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
 
         if ((date_start_in == null || date_start_in.trim() == "" || !date_start_in) || (date_end_in == null || date_end_in.trim() == "" || !date_end_in)) {
             errors << "Dates cannot be empty."
@@ -90,7 +90,7 @@ class ValidatorAllParameters {
                     errors << "The date_start_in is less than the date_end_in"
                 }
             } catch (DateTimeParseException e) {
-                errors << "Invalid values in the field: "
+                errors << "Invalid date value: ${e.getParsedString()}"
             }
         } else {
             LocalDate date_formated_start = null
