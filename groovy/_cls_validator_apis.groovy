@@ -1,6 +1,6 @@
 /*
 create_at: 2025-02-50 10:05
-update_at: 2025-02-50 10:05
+update_at: 2025-02-50 31:55
 
 @author: ronald.barberi
 
@@ -10,11 +10,14 @@ Read Me:
 // Imported libraries
 
 import java.time.LocalDate
+import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.time.format.DateTimeParseException
 
 //  Create class
 class ValidatorAllParameters {
+
+    List<String> errors = []
 
     def funValidatorToNumItemsInt(int_item, int minimum_value, boolean value_empty = false) {
 
@@ -23,10 +26,10 @@ class ValidatorAllParameters {
         }
 
         if(!value_empty && (int_item.trim() == "" || int_item == null || !int_item)) {
-            println("Value is empty.")
+            errors << "Value is empty."
         } else {
             if(int_item.toInteger() <= minimum_value) {
-                println("Value is less than: " + int_item)
+                errors << "Value is less than: " + int_item
             }
         }
     }
@@ -53,13 +56,13 @@ class ValidatorAllParameters {
                 if (value_empty) {
                     t = "0"
                 } else {
-                    println("Value is empty.")
+                    errors << "Value is empty."
                     return
                 }
             }
             
             if (!(t.length() in min_lengths*.toInteger())) {
-                println("The item '${t}' does not have the required length.")
+                errors << "The item '${t}' does not have the required length."
             }
         }
     }
@@ -71,7 +74,7 @@ class ValidatorAllParameters {
         def format_datetime = DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss")
 
         if ((date_start_in == null || date_start_in.trim() == "" || !date_start_in) || (date_end_in == null || date_end_in.trim() == "" || !date_end_in)) {
-            println("Dates cannot be empty.")
+            errors << "Dates cannot be empty."
             return
         }
 
@@ -81,13 +84,13 @@ class ValidatorAllParameters {
             LocalDate date_formated_end = null
 
             try {
-                date_formated_start = LocalDate.parse(date_start_in, format_datetime)
-                date_formated_end = LocalDate.parse(date_end_in, format_datetime)
+                date_formated_start = LocalDateTime.parse(date_start_in, format_datetime)
+                date_formated_end = LocalDateTime.parse(date_end_in, format_datetime)
                 if (date_formated_start.isAfter(date_formated_end)) {
-                    println("The date_start_in is less than the date_end_in")
+                    errors << "The date_start_in is less than the date_end_in"
                 }
             } catch (DateTimeParseException e) {
-                println("Invalid values in the field: ")
+                errors << "Invalid values in the field: "
             }
         } else {
             LocalDate date_formated_start = null
@@ -97,19 +100,24 @@ class ValidatorAllParameters {
                 date_formated_start = LocalDate.parse(date_start_in, format_date)
                 date_formated_end = LocalDate.parse(date_end_in, format_date)
                 if (date_formated_start.isAfter(date_formated_end)) {
-                    println("The date_start_in is less than the date_end_in")
+                    errors << "The date_start_in is less than the date_end_in"
                 }
             } catch (DateTimeParseException e) {
-                println("Invalid values the field")
+                errors << "Invalid values the field"
             }
         }
+    }
+
+
+    def funObtenerErrores() {
+        return errors.isEmpty() ? "No errors" : errors.join("; ")
     }
 
 }
 
 // Use class
 
-def filasPorPagina = "1"
+def filasPorPagina = ""
 def fechaInicio = "2025-01-29"
 def fechaFin = "2025-01-30"
 def tarjeta = ["1234"]
@@ -119,3 +127,5 @@ def validator = new ValidatorAllParameters()
 validator.funValidatorToNumItemsInt(filasPorPagina, 0, false)
 validator.funValidatorToNumItemsString(tarjeta, largo, false, true)
 validator.funValidatorDates(fechaInicio, fechaFin, false)
+def errores = validator.funObtenerErrores()
+println(errores)
