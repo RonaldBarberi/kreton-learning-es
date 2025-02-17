@@ -62,7 +62,7 @@
 | [var](#var) |  |
 | [corr](#corr) |  |
 | [cov](#cov) |  |
-| [sort_values](#sort_values) |  |
+| [sort_values](#sort_values) | Organizar un DataFrme 'Oder By'. |
 | [sort_index](#sort_index) |  |
 | [drop](#drop) |  |
 | [dropna](#dropna) |  |
