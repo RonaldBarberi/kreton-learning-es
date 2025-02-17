@@ -99,7 +99,8 @@
 | [ewm](#ewm) |  |
 | [resample](#resample) |  |
 | [interpolate](#interpolate) |  |
-| [](#) |  |
+| [interpolate](#interpolate) |  |
+| [query](#query) | Para filtrar los DataFrame conforme a la necesidad. |
 
 ## Esencial
 1. Para generar la instalación de la libreria de Pandas se debe ejecutar el siguiente comando:
@@ -743,6 +744,20 @@ df = df.sort_values(by="fecha_ini_log", ascending=True)  # ascendente
 df_sorted = df.sort_values(by="fecha_ini_log", ascending=False) # descendente
 
 df_sorted = df.sort_values(by=["fecha_ini_log", "interval_start"], ascending=[True, False]) # varias columnas
+```
+
+| Clave | Default | Función | Ejemplo Uso |
+| ----- | ------- | ------- | ----------- |
+
+### query
+
+```python
+df_filtrado = df.query("interval_start == '00:00:00'")
+
+df_filtrado = df.query("interval_start == '00:00:00' and date_start == '2024-01-01'")
+
+df_filtrado = df.query("interval_start == '00:00:00' or interval_start == '01:00:00'")
+
 ```
 
 | Clave | Default | Función | Ejemplo Uso |
