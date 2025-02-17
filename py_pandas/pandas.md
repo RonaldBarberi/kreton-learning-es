@@ -735,3 +735,15 @@ df = pandas.read_clipboard(sep=None, header='infer', names=None,
 | verbose | False | Si se deben mostrar mensajes adicionales sobre el análisis del archivo. | df = pandas.read_clipboard(verbose=True) |
 | storage_options | None | Opciones adicionales para el almacenamiento, como credenciales para acceder a archivos en la nube. | df = pandas.read_clipboard(storage_options={'key': 'my-access-key'}) |
 
+### sort_values
+
+```python
+df = df.sort_values(by="fecha_ini_log", ascending=True)  # ascendente
+
+df_sorted = df.sort_values(by="fecha_ini_log", ascending=False) # descendente
+
+df_sorted = df.sort_values(by=["fecha_ini_log", "interval_start"], ascending=[True, False]) # varias columnas
+```
+
+| Clave | Default | Función | Ejemplo Uso |
+| ----- | ------- | ------- | ----------- |
