@@ -736,6 +736,22 @@ df = pandas.read_clipboard(sep=None, header='infer', names=None,
 | verbose | False | Si se deben mostrar mensajes adicionales sobre el análisis del archivo. | df = pandas.read_clipboard(verbose=True) |
 | storage_options | None | Opciones adicionales para el almacenamiento, como credenciales para acceder a archivos en la nube. | df = pandas.read_clipboard(storage_options={'key': 'my-access-key'}) |
 
+### miin
+```python
+print(df["A"].min())  # Mínimo de la columna "A"
+```
+
+| Clave | Default | Función | Ejemplo Uso |
+| ----- | ------- | ------- | ----------- |
+
+### max
+```python
+print(df["A"].max())  # Máximo de la columna "A"
+```
+
+| Clave | Default | Función | Ejemplo Uso |
+| ----- | ------- | ------- | ----------- |
+
 ### sort_values
 
 ```python
