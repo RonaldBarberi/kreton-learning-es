@@ -101,6 +101,7 @@
 | [interpolate](#interpolate) |  |
 | [interpolate](#interpolate) |  |
 | [query](#query) | Para filtrar los DataFrame conforme a la necesidad. |
+| [cumsum](#cumsum) | Se usa para calcular la suma acumulativa de una columna en un DataFrame o Serie. |
 
 ## Esencial
 1. Para generar la instalación de la libreria de Pandas se debe ejecutar el siguiente comando:
@@ -782,6 +783,15 @@ df_filtrado = df.query("interval_start == '00:00:00' and date_start == '2024-01-
 
 df_filtrado = df.query("interval_start == '00:00:00' or interval_start == '01:00:00'")
 
+```
+
+| Clave | Default | Función | Ejemplo Uso |
+| ----- | ------- | ------- | ----------- |
+
+### cumsum
+
+```python
+df["ventas_acumuladas"] = df["ventas"].cumsum()
 ```
 
 | Clave | Default | Función | Ejemplo Uso |
