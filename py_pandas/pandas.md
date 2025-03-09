@@ -55,8 +55,8 @@
 | [mode](#mode) |  |
 | [sum](#sum) |  |
 | [prod](#prod) |  |
-| [min](#min) |  |
-| [max](#max) |  |
+| [min](#min) | Extraer el valor minimo de una columna en un DataFrame. |
+| [max](#max) | Extraer el valor máximo de una columna en un DataFrame. |
 | [count](#count) |  |
 | [std](#std) |  |
 | [var](#var) |  |
@@ -736,7 +736,7 @@ df = pandas.read_clipboard(sep=None, header='infer', names=None,
 | verbose | False | Si se deben mostrar mensajes adicionales sobre el análisis del archivo. | df = pandas.read_clipboard(verbose=True) |
 | storage_options | None | Opciones adicionales para el almacenamiento, como credenciales para acceder a archivos en la nube. | df = pandas.read_clipboard(storage_options={'key': 'my-access-key'}) |
 
-### miin
+### min
 ```python
 print(df["A"].min())  # Mínimo de la columna "A"
 ```
