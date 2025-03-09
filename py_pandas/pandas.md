@@ -40,7 +40,7 @@
 | [get_dummies](#get_dummies) |  |
 | [factorize](#factorize) |  |
 | [unique](#unique) |  |
-| [value_counts](#value_counts) |  |
+| [value_counts](#value_counts) | Permite realizar el conteo de veces que un elemento aparece en un DataFrame (columnas). |
 | [head](#head) |  |
 | [tail](#tail) |  |
 | [iloc](#iloc) |  |
@@ -735,6 +735,14 @@ df = pandas.read_clipboard(sep=None, header='infer', names=None,
 | na_filter | True | Si se deben detectar valores NaN. | df = pandas.read_clipboard(na_filter=False) |
 | verbose | False | Si se deben mostrar mensajes adicionales sobre el análisis del archivo. | df = pandas.read_clipboard(verbose=True) |
 | storage_options | None | Opciones adicionales para el almacenamiento, como credenciales para acceder a archivos en la nube. | df = pandas.read_clipboard(storage_options={'key': 'my-access-key'}) |
+
+### value_counts
+```python
+conteo = df["colores"].value_counts()
+```
+
+| Clave | Default | Función | Ejemplo Uso |
+| ----- | ------- | ------- | ----------- |
 
 ### min
 ```python
