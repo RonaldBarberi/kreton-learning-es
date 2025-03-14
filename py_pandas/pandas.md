@@ -39,7 +39,9 @@
 | [melt](#melt) |  |
 | [get_dummies](#get_dummies) |  |
 | [factorize](#factorize) |  |
-| [unique](#unique) |  |
+| [unique](#unique) | Se usa para obtener los valores únicos de una columna en un DataFrame o una Serie. |
+| [nunique](#nunique) | Se usa para contar los valores únicos de una columna en un DataFrame o una Serie. |
+| [dt.date.unique](#dt.date.unique) | Se usa para obtener solo fechas sin hora diferente en un DataFrame o una Serie. |
 | [value_counts](#value_counts) | Permite realizar el conteo de veces que un elemento aparece en un DataFrame (columnas). |
 | [head](#head) |  |
 | [tail](#tail) |  |
@@ -736,6 +738,30 @@ df = pandas.read_clipboard(sep=None, header='infer', names=None,
 | na_filter | True | Si se deben detectar valores NaN. | df = pandas.read_clipboard(na_filter=False) |
 | verbose | False | Si se deben mostrar mensajes adicionales sobre el análisis del archivo. | df = pandas.read_clipboard(verbose=True) |
 | storage_options | None | Opciones adicionales para el almacenamiento, como credenciales para acceder a archivos en la nube. | df = pandas.read_clipboard(storage_options={'key': 'my-access-key'}) |
+
+### unique
+```python
+df['columna'].unique()
+```
+
+| Clave | Default | Función | Ejemplo Uso |
+| ----- | ------- | ------- | ----------- |
+
+### nunique
+```python
+df['columna'].nunique(
+```
+
+| Clave | Default | Función | Ejemplo Uso |
+| ----- | ------- | ------- | ----------- |
+
+### dt.date.unique
+```python
+
+```
+
+| Clave | Default | Función | Ejemplo Uso |
+| ----- | ------- | ------- | ----------- |
 
 ### value_counts
 ```python
