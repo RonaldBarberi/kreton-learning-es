@@ -41,7 +41,7 @@
 | [factorize](#factorize) |  |
 | [unique](#unique) | Se usa para obtener los valores únicos de una columna en un DataFrame o una Serie. |
 | [nunique](#nunique) | Se usa para contar los valores únicos de una columna en un DataFrame o una Serie. |
-| [dt.date.unique](#dt.date.unique) | Se usa para obtener solo fechas sin hora diferente en un DataFrame o una Serie. |
+| [dt.date.unique](#dt-date-unique) | Se usa para obtener solo fechas sin hora diferente en un DataFrame o una Serie. |
 | [value_counts](#value_counts) | Permite realizar el conteo de veces que un elemento aparece en un DataFrame (columnas). |
 | [head](#head) |  |
 | [tail](#tail) |  |
@@ -757,7 +757,7 @@ df['columna'].nunique(
 
 ### dt.date.unique
 ```python
-
+df['fecha_tempo'].dt.date.unique()
 ```
 
 | Clave | Default | Función | Ejemplo Uso |
