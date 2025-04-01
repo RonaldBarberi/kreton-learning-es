@@ -5,6 +5,7 @@
 |-------|---|
 | [Esencial Para Uso](#esencial) | Generar instalación, e importar la librería para poderla utilizar. |
 | [Config](#config) | Configuraciones para la creación de la sesión de Spark. |
+| [Tipos de Datos](#structtype) | Tipos de datos soportados para RDD y DF en PySpark. |
 | [Read HIVE](#crear-dataframe-en-base-a-hive) | Crear un DataFrame en base a una tabla HIVE. |
 | [To HIVE](#guardar-el-dataframe-como-tabla-hive) | Exportar un DataFrame en HIVE. |
 | [Read TXT](#crear-el-dataframe-a-partir-de-un-archivo-txt) | Crear un DataFrame en base a un archivo TXT. |
@@ -119,6 +120,56 @@ spark = SparkSession.builder \
 | spark.broadcast.compress | true | Habilita compresión de variables broadcast. | .set('spark.broadcast.compress', 'true') |
 | spark.sql.inMemoryColumnarStorage.compressed | true | Comprime almacenamiento en memoria. | .set('spark.sql.inMemoryColumnarStorage.compressed', 'true') |
 | spark.hadoop.* |  | Cualquier configuración específica de Hadoop. | .set('spark.hadoop.fs.defaultFS', 'hdfs://localhost:9000') |
+
+---
+
+### StructType
+
+```python
+from pyspark.sql.types import (
+    StructType, StructField,
+    StringType, FloatType, IntegerType,
+    DoubleType, BooleanType, DateType,
+    TimestampType, DecimalType, BinaryType,
+    ArrayType, MapType, LongType
+)
+
+schema_spark = StructType([
+    StructField("columna1", StringType(), True),
+    StructField("columna2", FloatType(), True),
+    StructField("columna3", IntegerType(), True),
+    StructField("columna4", DoubleType(), True),
+    StructField("columna5", BooleanType(), True),
+    StructField("columna6", DateType(), True),
+    StructField("columna7", TimestampType(), True),
+    StructField("columna8", DecimalType(10, 2), True),
+    StructField("columna9", BinaryType(), True),
+    StructField("columna10", LongType(), True),
+    StructField("columna11", ArrayType(StringType()), True),
+    StructField("columna12", MapType(StringType(), IntegerType()), True),
+    StructField("columna13", StructType([
+        StructField("subcol1", StringType(), True),
+        StructField("subcol2", FloatType(), True)
+    ]), True)
+])
+```
+
+| Clave | Default | Función | Ejemplo Uso |
+| ----- | ------- | ------- | ----------- |
+| StructType |  | Define el esquema de un DataFrame mediante una lista de StructFields. | StructType([]) |
+| StructField |  | Define un campo individual dentro de un StructType. | StructField() |
+| StringType |  | Cadenas de texto (str). | StringType() |
+| FloatType |  | Números decimales de precisión simple (float). | FloatType() |
+| IntegerType |  | Enteros de 32 bits (int). | IntegerType() |
+| DoubleType |  | Números decimales de doble precisión (float en Python). | DoubleType() |
+| BooleanType |  | Valores booleanos (True o False). | BooleanType() |
+| DateType |  | Fechas (sin hora). | DateType() |
+| TimestampType |  | Tiempos con fecha y hora (precisión hasta microsegundos). | TimestampType() |
+| DecimalType |  | Números decimales con precisión y escala definidas. | DecimalType() |
+| BinaryType |  | Datos binarios (bytes). | BinaryType() |
+| ArrayType |  | Define un arreglo de un tipo específico. | ArrayType() |
+| MapType |  | Define un mapa (diccionario clave-valor). | MapType() |
+| LongType | Enteros de 64 bits (int de mayor tamaño). | Enteros de 64 bits (int de mayor tamaño). | LongType() |
 
 ---
 
