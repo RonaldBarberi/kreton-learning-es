@@ -87,6 +87,39 @@ spark = SparkSession.builder \
     .getOrCreate()
 ```
 
+| Clave | Default | Función | Ejemplo Uso |
+| ----- | ------- | ------- | ----------- |
+| spark.app.name | (vacío) | Nombre de la aplicación Spark. |  |
+| spark.master | * | Define el master: local[*], yarn, mesos, k8s, etc. |  |
+| spark.submit.deployMode | client | client o cluster. |  |
+| spark.ui.port | 4040 | Puerto de la UI de Spark. |  |
+| spark.executor.memory | 1g | Cantidad de memoria para cada executor (Ej: 2g). |  |
+| spark.executor.cores | 1 | Núcleos por executor. |  |
+| spark.executor.instances |  | Número de executors. |  |
+| spark.driver.memory | 1g | Memoria para el driver. |  |
+| spark.driver.cores | 1 | Núcleos para el driver. |  |
+| spark.dynamicAllocation.enabled | false | Habilita asignación dinámica de recursos (true / false). |  |
+| spark.sql.shuffle.partitions | 200 | Número de particiones por defecto para shuffles. |  |
+| spark.default.parallelism |  | Paralelismo por defecto. |  |
+| spark.serializer | org.apache.spark.serializer.JavaSerializer | Serializador. Recomendado: KryoSerializer. |  |
+| spark.kryo.registrationRequired | false | Si es true, requiere registro explícito de clases. |  |
+| spark.storage.memoryFraction | 0.6 | Fracción de memoria para almacenamiento (0.6 por defecto). |  |
+| spark.memory.fraction | 0.6 | Fracción de memoria ejecutora utilizada para almacenamiento. |  |
+| spark.authenticate | false | Habilita autenticación. |  |
+| spark.authenticate.secret |  | Secreto compartido para autenticación. |  |
+| spark.ssl.enabled | false | Habilita SSL. |  |
+| spark.sql.catalogImplementation | in-memory | Motor de catálogo (hive o in-memory). |  |
+| spark.sql.warehouse.dir | ./spark-warehouse | Directorio del almacén de datos. |  |
+| spark.sql.autoBroadcastJoinThreshold | 10485760 | Tamaño máximo de un DataFrame para broadcast join. |  |
+| spark.eventLog.enabled | false | Habilita el registro de eventos. |  |
+| spark.eventLog.dir |  | Directorio para guardar logs de eventos. |  |
+| spark.yarn.queue | default | Cola de YARN donde enviar la aplicación. |  |
+| spark.yarn.am.memor | 512m | Memoria para el ApplicationMaster en YARN. |  |
+| spark.rdd.compress | false | Habilita compresión de RDDs. |  |
+| spark.broadcast.compress | true | Habilita compresión de variables broadcast. |  |
+| spark.sql.inMemoryColumnarStorage.compressed | true | Comprime almacenamiento en memoria. |  |
+| spark.hadoop.* |  | Cualquier configuración específica de Hadoop. |  |
+
 ---
 
 ### Crear DataFrame en base a Hive.
