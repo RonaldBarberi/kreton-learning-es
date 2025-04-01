@@ -4,6 +4,7 @@
 |Función|Uso|
 |-------|---|
 | [Esencial Para Uso](#esencial) | Generar instalación, e importar la librería para poderla utilizar. |
+| [Config](#config) | Configuraciones para la creación de la sesión de Spark. |
 | [Read HIVE](#crear-dataframe-en-base-a-hive) | Crear un DataFrame en base a una tabla HIVE. |
 | [To HIVE](#guardar-el-dataframe-como-tabla-hive) | Exportar un DataFrame en HIVE. |
 | [Read TXT](#crear-el-dataframe-a-partir-de-un-archivo-txt) | Crear un DataFrame en base a un archivo TXT. |
@@ -58,6 +59,33 @@ mi_proyect
     - excel (Driver del excel en caso de ser descargado manualmente).
 ```
 
+---
+
+### Config
+
+```python
+from pyspark import SparkConf
+from pyspark.sql import SparkSession
+
+# Metodo 1
+spark = SparkSession.builder \
+    .appName('MiApp') \
+    .master('local[*]') \
+    .config('spark.executor.memory', '2g') \
+    .config('spark.sql.shuffle.partitions', '8')
+    .getOrCreate()
+
+# Metodo 2 SparkConf
+confg = SparkConf() \
+   .setMaster('local[*]') \
+   .setAppName("MiApp") \
+   .set('spark.executor.memory', '2g') \
+   .set('spark.sql.shuffle.partitions', '8')
+
+spark = SparkSession.builder \
+    .config(conf=confg) \
+    .getOrCreate()
+```
 
 ---
 
