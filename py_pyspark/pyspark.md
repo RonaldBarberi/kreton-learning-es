@@ -154,22 +154,22 @@ schema_spark = StructType([
 ])
 ```
 
-| Clave | Default | Función | Ejemplo Uso |
-| ----- | ------- | ------- | ----------- |
-| StructType |  | Define el esquema de un DataFrame mediante una lista de StructFields. | StructType([]) |
-| StructField |  | Define un campo individual dentro de un StructType. | StructField() |
-| StringType |  | Cadenas de texto (str). | StringType() |
-| FloatType |  | Números decimales de precisión simple (float). | FloatType() |
-| IntegerType |  | Enteros de 32 bits (int). | IntegerType() |
-| DoubleType |  | Números decimales de doble precisión (float en Python). | DoubleType() |
-| BooleanType |  | Valores booleanos (True o False). | BooleanType() |
-| DateType |  | Fechas (sin hora). | DateType() |
-| TimestampType |  | Tiempos con fecha y hora (precisión hasta microsegundos). | TimestampType() |
-| DecimalType |  | Números decimales con precisión y escala definidas. | DecimalType() |
-| BinaryType |  | Datos binarios (bytes). | BinaryType() |
-| ArrayType |  | Define un arreglo de un tipo específico. | ArrayType() |
-| MapType |  | Define un mapa (diccionario clave-valor). | MapType() |
-| LongType | Enteros de 64 bits (int de mayor tamaño). | Enteros de 64 bits (int de mayor tamaño). | LongType() |
+| Clave | Función | Ejemplo Uso |
+| ----- | ------- | ----------- |
+| StructType | Define el esquema de un DataFrame mediante una lista de StructFields. | StructType([]) |
+| StructField | Define un campo individual dentro de un StructType. | StructField() |
+| StringType | Cadenas de texto (str). | StringType() |
+| FloatType | Números decimales de precisión simple (float). | FloatType() |
+| IntegerType | Enteros de 32 bits (int). | IntegerType() |
+| DoubleType | Números decimales de doble precisión (float en Python). | DoubleType() |
+| BooleanType | Valores booleanos (True o False). | BooleanType() |
+| DateType | Fechas (sin hora). | DateType() |
+| TimestampType | Tiempos con fecha y hora (precisión hasta microsegundos). | TimestampType() |
+| DecimalType | Números decimales con precisión y escala definidas. | DecimalType() |
+| BinaryType | Datos binarios (bytes). | BinaryType() |
+| ArrayType | Define un arreglo de un tipo específico. | ArrayType() |
+| MapType | Define un mapa (diccionario clave-valor). | MapType() |
+| LongType | Enteros de 64 bits (int de mayor tamaño). | LongType() |
 
 ---
 
