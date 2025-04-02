@@ -14,6 +14,72 @@
 | [Read Excel](#crear-el-dataframe-a-partir-de-un-archivo-excel) | Crear un DataFrame en base a un archivo Excel. |
 | [To Excel](#exportar-un-dataframe-a-un-archivo-excel) | Exportan un DataFrame en un archivo Excel. |
 | [Read JDBC](#crear-el-dataframe-a-partir-de-un-motor-de-base-de-datos) | Crear un DataFrame en base a una Base de Datos. |
+| [columns](#) | Para saber el nombre de las columnas |
+| [dtypes](#) | Para saber el tipo de datos de cada columna |
+| [schema](#) | Para saber como Spark almacena el esquema del DataFrame |
+| [where](#) | Hacer uso de la clasula WHERE de SQL para generar filtros en el DF.  |
+| [filter](#filter) | Filtrar un DataFrame. |
+| [count](#) | Contar los elementos de la columna en un DF |
+| [countDistinct](#) | Contar los elementos únicos de una columna en un DF |
+| [sum](#) | Sumar valores númericos de la columna en un DF |
+| [min](#) | Obtener el maximo de la columna |
+| [max](#) | Obtener el minimo de la columna |
+| [avg](#) | Obtener el promedio de datos en una columna |
+| [pivot](#) |  |
+| [groupBy](#) |  |
+| [orderBy](#) | Función para ordernar el DF. |
+| [desc](#) | Función para ordernar de forma descendente los DF. |
+| [withColumn](#) | Para generar columnas derivadas de operaciones o funciones (columnas que proviene de otras columnas existentes). |
+| [withColumnRenamed](#) | Función para renombrar una columna ya existente. |
+| [join](#) | Función para realizar combinaciones de varios DataFrames. |
+| [union](#) | Función UNION, se utiliza para unir DF o RDD los cuales posean las mismas columnas. |
+| [map](#) | Se utiliza para trabajar con cada elemnto de una columna del DF. |
+| [flatMap](#) | Aplana los resultados generados al trabajar con todos los valores de una columna. |
+| [coalesce](#) | Función para controlar el número de diviciones del DF en las que trabaja. |
+| [repartition](#) | Función para controlar el número de particiones del DF. |
+| [parallelize](#) | Función para fucionar los valores de cada clave usando una función asociativa. |
+| [reduceByKey](#) |  |
+| [collect](#) |  |
+| [distinct](#) | Función para traer  todas las filas que sean únicas del DF. |
+| [drop](#) | Eliminar columnas especificas. |
+| [dropDuplicates](#) | Función para eliminar todos los registros duplicados de una columna. |
+| dropna | Función para eliminar las filas con valores nulos. |
+| [limit](#) | Función LIMIT para limitar la cantidad de registros. |
+| [sample](#) | Devuelve un conjunto de filas seleccionados de manera aleatoria de un dataframe, recibe un valor porcentual. |
+| [randomSplit](#) | Divide el DataFrame conforme a necesidad. |
+| [lit](#) | Función para poder agregar columnas con valores predeterminados. |
+| [to_date](#) | Cambia el tipo de dato de una columna a DateType |
+| [to_timestamp](#) | Cambia el tipo de dato de una columna a TimestampType |
+| [date_format](#) | Ajustar el formato de un valor TimestampType o DateType conforme a la necesidad. |
+| [datediff](#) | Restar en días las fechas. |
+| [months_between](#) | Saber los meses que transcurrieron de una fecha a otra. |
+| [last_day](#) | Extrae la última fecha de la columna. |
+| [date_add](#) | Sumar días a un valor TimestampType o DateType |
+| [date_sub](#) | Restar días a un valor TimestampType o DateType |
+| [year](#) | Extrae la fecha de un valor TimestampType o DateType |
+| [month](#) | Extrae el mes de un valor TimestampType o DateType |
+| [dayofmonth](#) | Extrae los días del mes de un valor TimestampType o DateType |
+| [dayofyear](#) | Extrae los días del año de un valor TimestampType o DateType |
+| [hour](#) | Extrae las horas de un valor TimestampType o DateType |
+| [minute](#) | Extrae los minutos de un valor TimestampType o DateType |
+| [second](#) | Extrae los segundos de un valor TimestampType o DateType |
+| [show](#) | Imprimir el DataFrame de PySpark |
+| [take](#) | Muestra la fila o el conjunto de filas que seleccionemos. |
+| [head](#) | Muestra el regiastro de la cabeza solicitado. |
+| [createOrReplaceTempView](#) | Crear tabla temporal (Pasas el DataFrame que ya se debio haber generado). |
+| [spark.sql](#) | Se utiliza para ejecutar sentencias SQL dentro del motor de Base de Datos. |
+| [select](#) | Se utiliza para seleccionar columnas o elementos en un DF. |
+| [broadcast](#) | Es un tipo de unión (join) optimizado en Apache Spark (se usa cuando una de los dos DF es pequeño.) |
+| [cache](#) | Realizar un print del caché consumido. |
+| [StorageLevel](#) | Se utiliza para solamente usar la memoria de la maquina (de lo contrario utilizará la memoria y el disco). |
+| [persist](#) |  |
+| [unpersist](#) | Eliminar la memoria caché de los datos |
+| [expr](#) | Función para ejecutar expresiones de construcción SQL (retorna una columna). |
+| [selectExpr](#) | Función para ejecutar expresiones de construcción SQL (retorna un DataFrame). |
+| [UDF](#) | Funciones definidas por el usuario. |
+| isNull | Filtrar para ver los valores NULL en un DF. |
+| isNotNull | Filtrar para ver los valores NO NULL en un DF. |
+| fillna | Función para reemplazar los valores nulos. |
 
 ---
 
