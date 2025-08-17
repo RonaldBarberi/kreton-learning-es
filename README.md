@@ -28,6 +28,9 @@
       <a href="https://github.com/RonaldBarberi/kreton-learning-es/blob/main/ambiente_virtual/ambientes_virtuales.md" target="_blank">Ambientes Virtuales</a>
     </li>
     <li>
+      <a href="" target="_blank">R - R Studio</a>
+    </li>
+    <li>
       <a href="https://github.com/RonaldBarberi/kreton-learning-es/blob/main/py_pandas/pandas.md" target="_blank">(Python)-Pandas</a>
     </li>
     <li>
