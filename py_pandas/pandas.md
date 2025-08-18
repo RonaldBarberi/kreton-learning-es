@@ -4,6 +4,7 @@
 |Función|Uso|
 |-------|---|
 | [Esencial Para Uso](#esencial) | Generar instalación, e importar la librería para poderla utilizar. |
+| [Tipos de Datos](#tipos-de-datos) | Tipos de datos para los DF. |
 | [DataFrame](#dataframe) | Generar un DataFrame en base a un diccionario almanecando en una variable. |
 | [Series](#series) | Se utiliza para crear una Serie en Pandas, que es una estructura de datos unidimensional similar a una columna de una tabla o un arreglo unidimensional con etiquetas (índices). |
 | [read_csv](#read_csv) | Leer archivos CSV y generar un DataFrame en base a ellos. |
@@ -104,6 +105,7 @@
 | [interpolate](#interpolate) |  |
 | [query](#query) | Para filtrar los DataFrame conforme a la necesidad. |
 | [cumsum](#cumsum) | Se usa para calcular la suma acumulativa de una columna en un DataFrame o Serie. |
+---
 
 ## Esencial
 1. Para generar la instalación de la libreria de Pandas se debe ejecutar el siguiente comando:
@@ -116,7 +118,11 @@
     ```python
     import pandas as pd
     ```
+---
+## Tipos de Datos
 
+
+---
 ## DataFrame
 ```python
 df = pd.DataFrame(data=None, index=None, columns=None, dtype=None, copy=False)
@@ -130,6 +136,7 @@ df = pd.DataFrame(data=None, index=None, columns=None, dtype=None, copy=False)
 | dtype | None | Se brinda un diccionario, para indicar desde la lectura el tipo de datos de las columnas (ejemplo: {'col1': str, 'col2': int}). | pd.DataFrame(data=None, index=None, columns=None, dtype=None) |
 | copy | False | Si es True, fuerza una copia de los datos, incluso si data es un DataFrame. Por defecto es False. | pd.DataFrame(data=None, index=None, columns=None, dtype=None, copy=False) |
 
+---
 ## Series
 ```python
 pandas.Series(data=None, index=None, dtype=None, name=None, copy=False, fastpath=False)
@@ -144,6 +151,7 @@ pandas.Series(data=None, index=None, dtype=None, name=None, copy=False, fastpath
 | copy | False | Si es True, fuerza una copia de los datos, incluso si data es un DataFrame. Por defecto es False. | pd.DataFrame(data=None, index=None, columns=None, dtype=None, copy=False) |
 | fastpath | False | Usado internamente para optimización. No se utiliza en la mayoría de los casos de uso habituales. | pandas.Series(data=None, index=None, dtype=None, name=None, copy=False, fastpath=False) |
 
+---
 ## read_csv
 
 ```python
@@ -210,6 +218,7 @@ df = pandas.read_csv(filepath_or_buffer, sep=',', delimiter=None, header='infer'
 | float_precision | None | Se utiliza para especificar cómo se deben manejar los números de punto flotante al leer un archivo CSV ('none', 'high', 'round_trip') | pd.read_csv(filepath_or_buffer, float_precision='high') |
 | storage_options | None | Se utiliza para proporcionar opciones adicionales de configuración para acceder a archivos almacenados en ubicaciones remotas o en sistemas de almacenamiento específicos, como Amazon S3, Google Cloud Storage, o incluso en sistemas de archivos locales. | pd.read_csv(filepath_or_buffer, storage_options=dicConectAws) |
 
+---
 ## to_csv
 
 ```python
@@ -822,3 +831,4 @@ df["ventas_acumuladas"] = df["ventas"].cumsum()
 
 | Clave | Default | Función | Ejemplo Uso |
 | ----- | ------- | ------- | ----------- |
+
