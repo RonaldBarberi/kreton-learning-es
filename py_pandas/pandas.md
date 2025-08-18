@@ -120,7 +120,42 @@
     ```
 ---
 ## Tipos de Datos
+| Tipo de Dato | |
+| ------------ |
+| int8, int16, int32, int64, uint8, uint16, uint32, uint64 | Enteros estándar (no nulos permitidos) |
+| "Int8", "Int16", "Int32", "Int64" | Enteros con soporte para NaN (nullable) |
+| float16, float32, float64 | Flotantes estándar (no nulos permitidos) |
+| "Float32", "Float64" | Flotantes con soporte para NaN (nullable) |
+| bool | tradicional (True/False, no soporta NaN) |
+| "boolean" | versión nullable (puede almacenar NA) |
+| object | strings genéricos (más costoso en memoria). |
+| string | dtype nativo de pandas (mejor gestión de nulos). |
+| string[python] | Backend Python (default). |
+| string[pyarrow] | Backend Arrow (más eficiente en memoria y operaciones). |
+| category | Almacena valores únicos como un diccionario de códigos enteros. Ideal para variables con baja cardinalidad. |
+| datetime64[ns] | Fecha y hora con resolución de nanosegundos. |
+| datetime64[ns, tz] | Con zona horaria. |
+| timedelta64[ns] | Diferencias de tiempo. |
+| Period[D/M/Y] | Periodos (día, mes, año). |
+| pd.SparseDtype("float32", fill_value=0) | Útiles para matrices dispersas (muchos ceros). |
+| pd.SparseDtype("int32", fill_value=0) | Útiles para matrices dispersas (muchos ceros). |
+| int32[pyarrow], string[pyarrow], boolean[pyarrow] | Muy eficientes en memoria y E/S (especialmente al leer Parquet/Feather). |
 
+```python
+import pandas as pd
+
+schema = {
+    "id": "Int32",              # entero con NaN permitido
+    "edad": "int16",            # entero pequeño
+    "ingreso": "float32",       # flotante
+    "activo": "boolean",        # booleano con NA
+    "genero": "category",       # categórico
+    "fecha_registro": "datetime64[ns]", # fecha
+    "comentario": "string[pyarrow]"     # texto eficiente
+}
+
+df = pd.read_csv("datos.csv", dtype=schema, parse_dates=["fecha_registro"])
+```
 
 ---
 ## DataFrame
@@ -831,4 +866,5 @@ df["ventas_acumuladas"] = df["ventas"].cumsum()
 
 | Clave | Default | Función | Ejemplo Uso |
 | ----- | ------- | ------- | ----------- |
+
 
