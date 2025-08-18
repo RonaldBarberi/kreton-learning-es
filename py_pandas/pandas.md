@@ -120,8 +120,8 @@
     ```
 ---
 ## Tipos de Datos
-| Tipo de Dato | |
-| ------------ |
+| Tipo de Dato | Desprición |
+| ------------ | ---------- |
 | int8, int16, int32, int64, uint8, uint16, uint32, uint64 | Enteros estándar (no nulos permitidos) |
 | "Int8", "Int16", "Int32", "Int64" | Enteros con soporte para NaN (nullable) |
 | float16, float32, float64 | Flotantes estándar (no nulos permitidos) |
@@ -866,5 +866,6 @@ df["ventas_acumuladas"] = df["ventas"].cumsum()
 
 | Clave | Default | Función | Ejemplo Uso |
 | ----- | ------- | ------- | ----------- |
+
 
 
