@@ -40,6 +40,15 @@
       <a href="https://github.com/RonaldBarberi/kreton-learning-es/blob/main/py_polars/polars.md" target="_blank">(Python)-Polars</a>
     </li>
     <li>
+      <a href="https://github.com/RonaldBarberi/kreton-learning-es/blob/main/py_scikit_learn/scikit-learn.md" target="_blank">(Python)-scikit-learn</a>
+    </li>
+    <li>
+      <a href="https://github.com/RonaldBarberi/kreton-learning-es/blob/main/py_xgboost/xgboost.md" target="_blank">(Python)-XGBoost</a>
+    </li>
+    <li>
+      <a href="https://github.com/RonaldBarberi/kreton-learning-es/blob/main/py_lightgmb/lightgmb.md" target="_blank">(Python)-LightGBM</a>
+    </li>
+    <li>
       <a href="https://github.com/RonaldBarberi/kreton-learning-es/blob/main/py_pyspark/pyspark.md" target="_blank">(Python)-PySpark</a>
     </li>
     <li>
@@ -56,7 +65,7 @@
   <div align="center">
     <h4>Control</h4>
     <p>
-      create_at: 2024-12-30 10:22:15 || edit_at: 2025-08-18 16:47:32
+      create_at: 2024-12-30 10:22:15 || edit_at: 2025-10-20 16:47:32
     </p>
   </div>
   <footer>
