@@ -40,6 +40,9 @@
       <a href="https://github.com/RonaldBarberi/kreton-learning-es/blob/main/py_polars/polars.md" target="_blank">(Python)-Polars</a>
     </li>
     <li>
+      <a href="https://github.com/RonaldBarberi/kreton-learning-es/blob/main/py_seaborn/seaborn.md" target="_blank">(Python)-Seaborn</a>
+    </li>
+    <li>
       <a href="https://github.com/RonaldBarberi/kreton-learning-es/blob/main/py_scikit_learn/scikit-learn.md" target="_blank">(Python)-scikit-learn</a>
     </li>
     <li>
