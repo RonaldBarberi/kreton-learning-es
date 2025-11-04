@@ -28,6 +28,9 @@
       <a href="https://github.com/RonaldBarberi/kreton-learning-es/blob/main/ambiente_virtual/ambientes_virtuales.md" target="_blank">Ambientes Virtuales</a>
     </li>
     <li>
+      <a href="https://github.com/RonaldBarberi/kreton-learning-es/blob/main/data_science_statistics/data_science_statistics.md" target="_blank">Data Science</a>
+    </li>
+    <li>
       <a href="https://github.com/RonaldBarberi/kreton-learning-es/blob/main/r_rstudio/r_rstudio.md" target="_blank">R - R Studio</a>
     </li>
     <li>
