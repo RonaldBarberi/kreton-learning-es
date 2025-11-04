@@ -32,3 +32,16 @@
 |                                                 | **TF-IDF + SVM / Logistic**                           | Usa pesos de palabras y modelos lineales.                             | Análisis de sentimientos, clasificaciones simples.                                                                                     | Buen rendimiento general.                                      | Limitado en contexto.                               |
 |                                                 | **Transformers (BERT, GPT, etc.)**                    | Modelos preentrenados de lenguaje.                                    | Tareas avanzadas de texto (chatbots, QA, resumen).                                                                                     | Potentes y precisos.                                           | Costosos de entrenar.                               |
 | **Visión por computadora**                      | **CNN (Convolutional Neural Network)**                | Aprende características visuales.                                     | Clasificación de imágenes, reconocimiento facial.                                                                                      | Muy precisas.                                                  | Requieren GPU y grandes datasets.                   |
+
+---
+## Guía rápida de elección
+| **Tipo de dato / tarea**               | **Modelo recomendado**             |
+| -------------------------------------- | ---------------------------------- |
+| Predicción de compra, abandono, fraude | Random Forest / XGBoost / CatBoost |
+| Predicción de precios o montos         | Gradient Boosting Regressor        |
+| Segmentación de clientes               | K-Means                            |
+| Análisis de texto                      | Naive Bayes / Transformers         |
+| Predicción de demanda / ventas         | Prophet / LSTM                     |
+| Imágenes o video                       | CNN                                |
+| Datos mixtos con muchas categorías     | CatBoost                           |
+| Datos lineales y pocos                 | Regresión logística o lineal       |
