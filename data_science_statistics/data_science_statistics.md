@@ -65,15 +65,31 @@ Metricas de medición para modelos ML
 | **Log-loss / Cross-entropy** | $( -\frac{1}{n}\sum [y_i \log(\hat{p}_i) + (1-y_i)\log(1-\hat{p}_i)] )$ | Penaliza predicciones probabilísticas erróneas | [0, ∞) | Estable en modelos probabilísticos  |
 | **Balanced Accuracy**        | Promedio de recall por clase                                        | Corrige desbalance de clases                   | [0, 1] | Adecuado para datasets desbalanceados   |
 
+Ejemplo con python sklearn
+```python
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score, log_loss, confusion_matrix
+
+# y_true, y_pred, y_prob ya definidos
+metrics = {
+    'Accuracy': accuracy_score(y_true, y_pred),
+    'Precision': precision_score(y_true, y_pred),
+    'Recall': recall_score(y_true, y_pred),
+    'F1-Score': f1_score(y_true, y_pred),
+    'AUC-ROC': roc_auc_score(y_true, y_prob),
+    'Log-Loss': log_loss(y_true, y_prob),
+    'Confusion Matrix': confusion_matrix(y_true, y_pred)
+}
+```
+
 ---
 ## Metricas de Regresión
 | Métrica                               | Fórmula                                                           | Interpretación                         | Rango   |                           |        |
 | ------------------------------------- | ----------------------------------------------------------------- | -------------------------------------- | ------- | ------------------------- | ------ |
-| **MAE (Mean Absolute Error)**         | $( \frac{1}{n}\sum$                                               | y_i - \hat{y}_i                        | )       | Error promedio absoluto   | [0, ∞) |
+| **MAE (Mean Absolute Error)**         | $( \frac{1}{n}\sum$                                               | $y_i - \hat{y}_i$                        | )       | Error promedio absoluto   | [0, ∞) |
 | **MSE (Mean Squared Error)**          | $( \frac{1}{n}\sum (y_i - \hat{y}_i)^2 )$                         | Penaliza grandes errores               | [0, ∞)  |                           |        |
 | **RMSE**                              | $( \sqrt{MSE} )$                                                  | Error cuadrático en misma escala que y | [0, ∞)  |                           |        |
 | **R² (Coeficiente de determinación)** | $( 1 - \frac{\sum (y_i - \hat{y}_i)^2}{\sum (y_i - \bar{y})^2} )$ | Proporción de varianza explicada       | (-∞, 1] |                           |        |
-| **MAPE**                              | $( \frac{100}{n}\sum$                                      | \frac{y_i - \hat{y}_i}{y_i}\right      | )       | Error relativo porcentual | [0, ∞) |
+| **MAPE**                              | $( \frac{100}{n}\sum$                                      | $\frac{y_i - \hat{y}_i}{y_i}\right$      | )       | Error relativo porcentual | [0, ∞) |
 
 ---
 ## Metricas de Clustering
