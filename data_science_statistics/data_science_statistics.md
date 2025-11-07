@@ -73,7 +73,7 @@ Metricas de medición para modelos ML
 | **MSE (Mean Squared Error)**          | $( \frac{1}{n}\sum (y_i - \hat{y}_i)^2 )$                         | Penaliza grandes errores               | [0, ∞)  |                           |        |
 | **RMSE**                              | $( \sqrt{MSE} )$                                                  | Error cuadrático en misma escala que y | [0, ∞)  |                           |        |
 | **R² (Coeficiente de determinación)** | $( 1 - \frac{\sum (y_i - \hat{y}_i)^2}{\sum (y_i - \bar{y})^2} )$ | Proporción de varianza explicada       | (-∞, 1] |                           |        |
-| **MAPE**                              | $( \frac{100}{n}\sum \left$                                       | \frac{y_i - \hat{y}_i}{y_i}\right      | )       | Error relativo porcentual | [0, ∞) |
+| **MAPE**                              | $( \frac{100}{n}\sum$                                      | \frac{y_i - \hat{y}_i}{y_i}\right      | )       | Error relativo porcentual | [0, ∞) |
 
 ---
 ## Metricas de Clustering
