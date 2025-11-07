@@ -55,25 +55,25 @@
 
 ---
 Metricas de medición para modelos ML
-| Métrica                      | Fórmula                                                               | Interpretación                                 | Rango  | Comentario de eficiencia                |
-| ---------------------------- | --------------------------------------------------------------------- | ---------------------------------------------- | ------ | --------------------------------------- |
-| **Accuracy**                 | ( \frac{TP + TN}{TP + TN + FP + FN} )                                 | Proporción de aciertos globales                | [0, 1] | Sensible al desbalance de clases        |
-| **Precision**                | ( \frac{TP}{TP + FP} )                                                | Fiabilidad de las predicciones positivas       | [0, 1] | Útil en contextos con alto costo de FP  |
-| **Recall (Sensibilidad)**    | ( \frac{TP}{TP + FN} )                                                | Capacidad de detectar positivos reales         | [0, 1] | Clave en contextos con alto costo de FN |
-| **F1-score**                 | ( 2 \cdot \frac{Precision \cdot Recall}{Precision + Recall} )         | Media armónica de precisión y recall           | [0, 1] | Balancea falsos positivos y negativos   |
-| **AUC-ROC**                  | Área bajo la curva ROC                                                | Evalúa capacidad de discriminación             | [0, 1] | Costoso: O(n log n) para ordenamiento   |
-| **Log-loss / Cross-entropy** | ( -\frac{1}{n}\sum [y_i \log(\hat{p}_i) + (1-y_i)\log(1-\hat{p}_i)] ) | Penaliza predicciones probabilísticas erróneas | [0, ∞) | Estable en modelos probabilísticos      |
-| **Balanced Accuracy**        | Promedio de recall por clase                                          | Corrige desbalance de clases                   | [0, 1] | Adecuado para datasets desbalanceados   |
+| Métrica                      | Fórmula                                                             | Interpretación                                 | Rango  | Comentario de eficiencia                |
+| ---------------------------- | ------------------------------------------------------------------- | ---------------------------------------------- | ------ | --------------------------------------- |
+| **Accuracy**                 | $( \frac{TP + TN}{TP + TN + FP + FN} )$                             | Proporción de aciertos globales                | [0, 1] | Sensible al desbalance de clases        |
+| **Precision**                | $( \frac{TP}{TP + FP} )$                                            | Fiabilidad de las predicciones positivas       | [0, 1] | Útil en contextos con alto costo de FP  |
+| **Recall (Sensibilidad)**    | $( \frac{TP}{TP + FN} )$                                            | Capacidad de detectar positivos reales         | [0, 1] | Clave en contextos con alto costo de FN |
+| **F1-score**                 | $( 2 \cdot \frac{Precision \cdot Recall}{Precision + Recall} )$     | Media armónica de precisión y recall           | [0, 1] | Balancea falsos positivos y negativos   |
+| **AUC-ROC**                  | Área bajo la curva ROC                                              | Evalúa capacidad de discriminación             | [0, 1] | Costoso: O(n log n) para ordenamiento   |
+| **Log-loss / Cross-entropy** | $( -\frac{1}{n}\sum [y_i \log(\hat{p}_i) + (1-y_i)\log(1-\hat{p}_i)] )$ | Penaliza predicciones probabilísticas erróneas | [0, ∞) | Estable en modelos probabilísticos  |
+| **Balanced Accuracy**        | Promedio de recall por clase                                        | Corrige desbalance de clases                   | [0, 1] | Adecuado para datasets desbalanceados   |
 
 ---
 ## Metricas de Regresión
-| Métrica                               | Fórmula                                                         | Interpretación                         | Rango   |                           |        |
-| ------------------------------------- | --------------------------------------------------------------- | -------------------------------------- | ------- | ------------------------- | ------ |
-| **MAE (Mean Absolute Error)**         | ( \frac{1}{n}\sum                                               | y_i - \hat{y}_i                        | )       | Error promedio absoluto   | [0, ∞) |
-| **MSE (Mean Squared Error)**          | ( \frac{1}{n}\sum (y_i - \hat{y}_i)^2 )                         | Penaliza grandes errores               | [0, ∞)  |                           |        |
-| **RMSE**                              | ( \sqrt{MSE} )                                                  | Error cuadrático en misma escala que y | [0, ∞)  |                           |        |
-| **R² (Coeficiente de determinación)** | ( 1 - \frac{\sum (y_i - \hat{y}_i)^2}{\sum (y_i - \bar{y})^2} ) | Proporción de varianza explicada       | (-∞, 1] |                           |        |
-| **MAPE**                              | ( \frac{100}{n}\sum \left                                       | \frac{y_i - \hat{y}_i}{y_i}\right      | )       | Error relativo porcentual | [0, ∞) |
+| Métrica                               | Fórmula                                                           | Interpretación                         | Rango   |                           |        |
+| ------------------------------------- | ----------------------------------------------------------------- | -------------------------------------- | ------- | ------------------------- | ------ |
+| **MAE (Mean Absolute Error)**         | $( \frac{1}{n}\sum$                                               | y_i - \hat{y}_i                        | )       | Error promedio absoluto   | [0, ∞) |
+| **MSE (Mean Squared Error)**          | $( \frac{1}{n}\sum (y_i - \hat{y}_i)^2 )$                         | Penaliza grandes errores               | [0, ∞)  |                           |        |
+| **RMSE**                              | $( \sqrt{MSE} )$                                                  | Error cuadrático en misma escala que y | [0, ∞)  |                           |        |
+| **R² (Coeficiente de determinación)** | $( 1 - \frac{\sum (y_i - \hat{y}_i)^2}{\sum (y_i - \bar{y})^2} )$ | Proporción de varianza explicada       | (-∞, 1] |                           |        |
+| **MAPE**                              | $( \frac{100}{n}\sum \left$                                       | \frac{y_i - \hat{y}_i}{y_i}\right      | )       | Error relativo porcentual | [0, ∞) |
 
 ---
 ## Metricas de Clustering
