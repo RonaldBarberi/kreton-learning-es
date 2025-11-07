@@ -67,7 +67,9 @@ Metricas de medición para modelos ML
 
 Ejemplo con python sklearn
 ```python
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score, log_loss, confusion_matrix
+from sklearn.metrics import (
+    accuracy_score, precision_score, recall_score, f1_score, roc_auc_score, log_loss, confusion_matrix
+)
 
 # y_true, y_pred, y_prob ya definidos
 metrics = {
