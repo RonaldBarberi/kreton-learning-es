@@ -79,3 +79,16 @@ En otras palabras, subes tus datos (por ejemplo, archivos CSV, JSON o Parquet) a
 * Compatible con formatos comunes y con AWS Glue para catalogar los datos.
 
 **Ejemplo de uso:** consultar logs almacenados en S3 para analizar tráfico web o realizar análisis rápidos sobre grandes volúmenes de datos.
+
+---
+## Amazon QuickSight
+Es un servicio de **Business Intelligence (BI)** en la nube de AWS que permite **visualizar y analizar datos de forma interactiva** mediante paneles, gráficos y reportes dinámicos.
+
+**Características principales:**
+
+* Conecta datos desde distintas fuentes (S3, Athena, Redshift, RDS, etc.).
+* Permite crear **dashboards interactivos** sin necesidad de programar.
+* Utiliza **machine learning** para detectar patrones o anomalías automáticamente.
+* Es **escalable y totalmente gestionado**, sin necesidad de instalar software.
+
+**Ejemplo de uso:** crear un panel que muestre métricas de ventas o rendimiento en tiempo real a partir de datos almacenados en AWS.
