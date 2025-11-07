@@ -63,4 +63,19 @@ Espacio de ejecución para la ejecución de Scripts.
 
 ---
 ## Amazon IOT
+
 Servicio para consumir
+
+---
+## Amazon Athena
+Es un servicio de análisis interactivo de AWS que permite **consultar datos directamente en Amazon S3 usando SQL**, sin necesidad de configurar servidores ni bases de datos.
+
+En otras palabras, subes tus datos (por ejemplo, archivos CSV, JSON o Parquet) a S3, y con Athena puedes ejecutar consultas SQL sobre ellos sin tener que moverlos.
+
+**Ventajas clave:**
+
+* No requiere infraestructura (es *serverless*).
+* Pagas solo por las consultas que ejecutas.
+* Compatible con formatos comunes y con AWS Glue para catalogar los datos.
+
+**Ejemplo de uso:** consultar logs almacenados en S3 para analizar tráfico web o realizar análisis rápidos sobre grandes volúmenes de datos.
