@@ -67,6 +67,9 @@
     <li>
       <a href="https://github.com/RonaldBarberi/kreton-learning-es/blob/main/groovy/groovy.md" target="_blank">Groovy</a>
     </li>
+    <li>
+      <a href="https://github.com/RonaldBarberi/kreton-learning-es/blob/main/aws_amazon_web_service/aws.md" target="_blank">Amazon Web Service</a>
+    </li>
   </ul>
   <div align="center">
     <h4>Control</h4>
