@@ -105,6 +105,64 @@ plt.show(
 ```
 
 ---
+Modelo de Regresión Logística.
+
+Ecuación lineal interna: $z = \beta_0 + \beta_1X_1 + \beta_2X_2 ... + \beta_nX_n$
+
+Función Logística (sigmoide): $P(Y=|X_1,X_2,...,X_n) = \frac{1}{1 + e^{-z}}$
+
+Función completa sustituyendo $z$: $P(Y=|X_1,X_2,...,X_n) = \frac{1}{1 + e^{(\beta_0 + \beta_1X_1 + \beta_2X_2 ... + \beta_nX_n)}}$
+
+Ejemplo de ejecución en Python utilizando Scikit Learn
+
+```python
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LogisticRegression
+
+data = {
+    'horas_estudio': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    'aprueba':       [0, 0, 0, 0, 0, 1, 1, 1, 1, 1]
+}
+
+df = pd.DataFrame(data)
+
+plt.scatter(df['horas_estudio'], df['aprueba'])
+plt.xlabel('Horas de estudio')
+plt.ylabel('Aprueba (1 = sí, 0 = no)')
+plt.title('Relación entre horas de estudio y aprobación')
+plt.show()
+
+X = df[['horas_estudio']]  # variable independiente
+y = df['aprueba']          # variable dependiente
+
+modelo = LogisticRegression()
+modelo.fit(X, y)
+
+print("Intercepto (β₀):", modelo.intercept_[0])
+print("Coeficiente (β₁):", modelo.coef_[0][0])
+
+horas_nuevas = [[4], [7], [9]]
+probabilidades = modelo.predict_proba(horas_nuevas)
+
+for h, p in zip(horas_nuevas, probabilidades):
+    print(f"Horas: {h[0]}, Probabilidad de aprobar: {p[1]:.2f}")
+
+X_range = np.linspace(0, 10, 100).reshape(-1, 1)
+y_pred = modelo.predict_proba(X_range)[:, 1]
+
+plt.scatter(df['horas_estudio'], df['aprueba'], label='Datos reales')
+plt.plot(X_range, y_pred, color='red', label='Curva logística')
+plt.xlabel('Horas de estudio')
+plt.ylabel('Probabilidad de aprobar')
+plt.legend()
+plt.title('Regresión Logística')
+plt.show()
+
+```
+
+---
 ## Matriz de confusión
 |               | Predicho Positivo   | Predicho Negativo   |
 | ------------- | ------------------- | ------------------- |
