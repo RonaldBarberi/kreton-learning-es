@@ -47,6 +47,64 @@
 | Datos lineales y pocos                 | Regresión logística o lineal       |
 
 ---
+## Modelo de Regresión Lineal (Minimos Cuadrados).
+
+Regresión lineal simple: $\hat{Y} = \beta_0 + \beta_1X$
+
+Donde primero se calcula: $\beta_1 = \frac{\sum(x_1 - \overline{x})(y_1 - \hat{y})}{\sum(x_1 - \overline{x})^2}$
+
+Donde posteriormente: $\beta0 = \hat{y} - \beta_1 \overline{x}$
+
+Regresión multilineal: $\hat{Y} = \beta_0 + \beta_1X_1 + \beta_2X_2 ... + \beta_nX_n$
+
+Donde primero se calcula: $\beta_n = \frac{\sum(x_n - \overline{x})(y_n - \hat{y})}{\sum(x_n - \overline{x})^2}$
+
+Donde posteriormente: $\beta_n = \frac{\sum(x_n - \overline{x}_n)(y_n - \hat{y}_n)}{\sum(x_n - \overline{x}_n)^2}$
+
+Ejemplo de ejecución en Python utilizando Scikit Learn
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+
+# Datos simulados
+data = {
+    'altura': [150, 160, 170, 180, 190],
+    'peso': [50, 60, 65, 75, 85]
+}
+
+df = pd.DataFrame(data)
+
+plt.scatter(df['altura'], df['peso'])
+plt.xlabel('Altura (cm)')
+plt.ylabel('Peso (kg)')
+plt.title('Relación entre altura y peso')
+plt.show()
+
+X = df[['altura']]  # variable independiente (altura)
+y = df['peso']      # variable dependiente (peso)
+
+modelo = LinearRegression()
+modelo.fit(X, y)
+
+print("Intercepto (β₀):", modelo.intercept_)
+print("Pendiente (β₁):", modelo.coef_[0])
+
+altura_nueva = [[175]]
+peso_predicho = modelo.predict(altura_nueva)
+print("Peso estimado para altura 175 cm:", peso_predicho[0])
+
+plt.scatter(df['altura'], df['peso'], label='Datos reales')
+plt.plot(df['altura'], modelo.predict(X), color='red', label='Línea de regresión')
+plt.xlabel('Altura (cm)')
+plt.ylabel('Peso (kg)')
+plt.legend()
+plt.title('Regresión Lineal Simple')
+plt.show(
+```
+
+---
 ## Matriz de confusión
 |               | Predicho Positivo   | Predicho Negativo   |
 | ------------- | ------------------- | ------------------- |
